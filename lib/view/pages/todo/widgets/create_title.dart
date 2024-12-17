@@ -1,5 +1,5 @@
 import 'package:al_fatiha/data/tools/styles/res_colors.dart';
-import 'package:al_fatiha/view/pages/login/widgets/common_text.dart';
+import 'package:al_fatiha/view/widgets/common_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,7 +14,6 @@ class CreateTitle extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-
           CommonText( text: 'Enter title:',),
           Container(
             // width: 328.w,

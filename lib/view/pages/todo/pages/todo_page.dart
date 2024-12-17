@@ -1,6 +1,6 @@
 import 'package:al_fatiha/data/tools/styles/res_colors.dart';
-import 'package:al_fatiha/view/pages/login/widgets/common_text.dart';
 import 'package:al_fatiha/view/pages/todo/controller/todo_controller.dart';
+import 'package:al_fatiha/view/widgets/common_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';

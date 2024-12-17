@@ -55,12 +55,13 @@ class TodoController extends BaseController{
     }
   Future<void>createTodo()async{
       if(title.isEmpty && description.isEmpty && pickedDate==null && pickedTime ==null){
-
+        Get.snackbar(Strings.appName.tr, 'Select all fields!');
+        return;
       }else{
         String timeOfDayToString(TimeOfDay time) => '${time.hour}:${time.minute}';
         DateTime? dateTime=combineDateAndTime(pickedDate, pickedTime!);
-        print('DATETIME:::HOUR${dateTime!.hour}:MINUTE:${dateTime.minute}:::');
-        if(dateTime.isBefore(DateTime.now()) || dateTime==DateTime.now()){
+
+        if(dateTime!.isBefore(DateTime.now()) || dateTime==DateTime.now()){
           Get.snackbar(Strings.appName.tr, 'Select future time!');
           return;
         }
@@ -70,7 +71,7 @@ class TodoController extends BaseController{
             pickedDate:pickedDate!,
             timeOfDay:timeOfDayToString(pickedTime!)
         );
-        // NotificationService().showNotification(id:0,title: "Todo Created", body: title);
+       // NotificationService().showNotification(id:0,title: "Todo Created", body: title);
 
         NotificationService().scheduleNotification(
           title:title,
@@ -79,11 +80,14 @@ class TodoController extends BaseController{
         );
         await saveTodo(model);
         await getAllTodos();
-      }
+        print('FINISH');
 
-    update();
-    Get.back();
+      }
+      update();
+      Get.back();
+      Get.snackbar(Strings.appName.tr, 'Todo created!');
   }
+
   Future<void>testNot(DateTime dateTime)async{
     NotificationService().scheduleNotification(
         title:'title',

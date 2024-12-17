@@ -1,6 +1,5 @@
-import 'package:al_fatiha/view/pages/fotiha/controller/fotiha_controller.dart';
+import 'package:al_fatiha/view/pages/todo/controller/todo_controller.dart';
 import 'package:get/get.dart';
-
 import 'data/server/api/api_service.dart';
 import 'data/server/auth_interceptor.dart';
 
@@ -22,7 +21,7 @@ class DIService {
 
     Get.lazyPut<LoginUseCase>(() => LoginUseCase(Get.find()), fenix: true);
     //controller
-    Get.lazyPut<FotihaController>(() => FotihaController(), fenix: true);
+    Get.lazyPut<TodoController>(() => TodoController(), fenix: true);
   }
 
 

@@ -1,10 +1,10 @@
 import 'package:al_fatiha/data/tools/styles/res_colors.dart';
-import 'package:al_fatiha/view/pages/login/widgets/common_text.dart';
 import 'package:al_fatiha/view/pages/todo/controller/todo_controller.dart';
 import 'package:al_fatiha/view/pages/todo/widgets/create_date.dart';
 import 'package:al_fatiha/view/pages/todo/widgets/create_description.dart';
 import 'package:al_fatiha/view/pages/todo/widgets/create_time.dart';
 import 'package:al_fatiha/view/pages/todo/widgets/create_title.dart';
+import 'package:al_fatiha/view/widgets/common_text.dart';
 import 'package:al_fatiha/view/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

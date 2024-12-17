@@ -1,20 +1,12 @@
-import 'package:al_fatiha/view/pages/fotiha/pages/fotiha_main_page.dart';
-import 'package:al_fatiha/view/pages/fotiha/pages/read_fotiha_page.dart';
-import 'package:al_fatiha/view/pages/fotiha/widgets/audio_player_page.dart';
 import 'package:al_fatiha/view/pages/todo/pages/add_todo.dart';
 import 'package:al_fatiha/view/pages/todo/pages/todo_page.dart';
 import 'package:get/get.dart';
-
-import '../../view/pages/login/login.dart';
 
 
 class RouteHelper {
   static const String initial = '/';
   static const String signIn = '/sign_in';
   static const String signUp = '/sign_up';
-  static const String fotihaPage = '/fotiha_page';
-  static const String readFatihaPage = '/read_fotiha_page';
-  static const String audioPlayerPage = '/audio_player_page';
   static const String todoPage = '/todo_page';
   static const String addTodo = '/add_todo';
 
@@ -24,9 +16,6 @@ class RouteHelper {
   static String getSignIn() => signIn;
 
   static String getSignUp() => signUp;
-  static String getFotihaPage() => fotihaPage;
-  static String getReadFatihaPage() => readFatihaPage;
-  static String getAudioPlayerPage() => audioPlayerPage;
   static String getTodoPage() => todoPage;
   static String getAddTodo() => addTodo;
 
@@ -40,20 +29,6 @@ class RouteHelper {
 
 
   static List<GetPage> routes = [
-    // GetPage(name: initial, page: () => const MainPage()),
-    // GetPage(name: splashPage, page: () => const SplashScreen()),
-    GetPage(
-        name: signIn,
-        page: () => const LoginPage(),
-        transition: Transition.fadeIn),
-    GetPage(
-        name: fotihaPage,
-        page: () => const FotihaMainPage(),
-        transition: Transition.fadeIn),
-    GetPage(
-        name: readFatihaPage,
-        page: () => const ReadFotihaPage(),
-        transition: Transition.fadeIn),
     GetPage(
         name: todoPage,
         page: () => const TodoPage(),
