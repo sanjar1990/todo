@@ -17,7 +17,7 @@ class NotificationService {
 
   Future<void> initNotification() async {
     AndroidInitializationSettings initializationSettingsAndroid =
-    AndroidInitializationSettings('@drawable/notification_ic');
+    AndroidInitializationSettings('@drawable/notification_ic.png');
     var iosInitializationSettings = DarwinInitializationSettings(
       requestAlertPermission: true,
       requestBadgePermission: true,
@@ -38,22 +38,22 @@ class NotificationService {
   notificationDetails() {
     return NotificationDetails(
         android: AndroidNotificationDetails('channelId', 'channelName',
-            importance: Importance.max, priority: Priority.high, ticker: 'Ticker'),
+            importance: Importance.max, priority: Priority.high, ticker: 'Ticker',icon: '@drawable/notification_ic.png'),
         iOS: DarwinNotificationDetails()
     );
   }
   sceduleNotificationDetails() {
     return NotificationDetails(
-        android: AndroidNotificationDetails('channelId', 'channelName',
+        android: AndroidNotificationDetails('channelId two', 'channelName two',
             channelDescription: 'your channel description',
-            importance: Importance.max, priority: Priority.high, ticker: 'Ticker'),
+            importance: Importance.max, priority: Priority.high,icon: '@drawable/notification_ic.png'),
         iOS: DarwinNotificationDetails()
     );
   }
 
 
   Future scheduleNotification(
-      {int id = 2, String? title, String? body, String? payload,
+      {int id = 3, String? title, String? body, String? payload,
         required DateTime schedule}) async {
     print('NOTIFICATION>>>'
         'YEAR::${schedule.year}'

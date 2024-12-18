@@ -89,10 +89,11 @@ class TodoController extends BaseController{
   }
 
   Future<void>testNot(DateTime dateTime)async{
+      DateTime dateTime=DateTime.now();
     NotificationService().scheduleNotification(
         title:'title',
         body:'description',
-        schedule:dateTime
+        schedule:DateTime(dateTime.year,dateTime.month,dateTime.day,dateTime.hour,dateTime.minute+1),
     );
   }
 }
